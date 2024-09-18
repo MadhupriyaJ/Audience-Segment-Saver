@@ -4,6 +4,7 @@ import SaveSegmentPopup from './SaveSegmentPopup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
+
 const schemaOptions = [
   { label: 'First Name', value: 'first_name' },
   { label: 'Last Name', value: 'last_name' },
@@ -18,6 +19,7 @@ function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [segmentName, setSegmentName] = useState('');
   const [selectedSchemas, setSelectedSchemas] = useState([]);
+
 
   const handleSaveSegment = () => {
     const data = {
@@ -41,9 +43,10 @@ function App() {
 
   return (
     <>
+
      <div className='bg-sky-400 h-16 flex items-center text-white gap-2'>
        <FontAwesomeIcon icon={faChevronLeft} />
-        <text className='text-white'>View Audience</text>
+        <span className='text-white'>View Audience</span>
       </div>
       <div className="flex justify-center items-center h-screen w-screen bg-gray-100">
       
@@ -65,7 +68,9 @@ function App() {
           handleClose={() => setShowPopup(false)}
         />
       )}
-    </div></>
+    </div>
+  
+    </>
    
   );
 }
